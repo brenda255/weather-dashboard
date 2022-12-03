@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Develop/style.css">
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
-    
+    <header>Weather Dashboard</header>
+    <aside>
+        <div id="city-search">
+            <h1>Search for a City:</h1>
+            <div>
+
+                <input name="city" type="text" placeholder="Salt Lake City" id="search" />
+                <button id="search-btn">Search</button>
+            </div>
+            <!-- already searched cities that are in local storage -->
+            <div id="search-history"></div>
+    </aside>
+    <container>
+        <div id="today-weather">
+            <p>
+                <span class="current-city" </span>
+                    <img src="" alt="">
+                    <span class="today-date" </span>
+                        <span class="today-temp" </span>
+                            <span class="today-wind" </span></span>
+                            <span class="today-humidity" </span></span>
+            </p>
+        </div>
+        <h2>5-Day Forecast:</h2>
+        <div id="forecast">
+            <div>
+                <p>
+                    <span class="first" </span>
+                        <img src="" alt="">
+                        <span class="first-date" </span>
+                            <span class="first-temp" </span>
+                                <span class="first-wind" </span></span>
+                                <span class="first-humidity" </span></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span class="second" </span>
+                        <img src="" alt="">
+                        <span class="second-date" </span>
+                            <span class="second-temp" </span>
+                                <span class="second-wind" </span></span>
+                                <span class="second-humidity" </span></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span class="third" </span>
+                        <img src="" alt="">
+                        <span class="third-date" </span>
+                            <span class="third-temp" </span>
+                                <span class="third-wind" </span></span>
+                                <span class="third-humidity" </span></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span class="fourth" </span>
+                        <img src="" alt="">
+                        <span class="fourth-date" </span>
+                            <span class="fourth-temp" </span>
+                                <span class="fourth-wind" </span></span>
+                                <span class="fourth-humidity" </span></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span class="fifth" </span>
+                        <img src="" alt="">
+                        <span class="fifth-date" </span>
+                            <span class="fifth-temp" </span>
+                                <span class="fifth-wind" </span></span>
+                                <span class="fifth-humidity" </span></span>
+                </p>
+            </div>
+        </div>
+    </container>
+    </div>
+    </aside>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./Develop/script.js"></script>
 </body>
+
 </html>
