@@ -52,16 +52,17 @@
 
 
 
-var citySearch = $("#city-search");
-var search = $("#search");
+var citySearch = document.getElementById("city-search");
 var searchBtn =$("#search-btn");
 var searchHistory=$("#search-history");
 var todayWeather= $("#today-weather");
 var todayTemp =$(".today-temp");
 var todayWind= $(".today-wind");
 var todayHumidity= $(".today-humidity");
-var api = "e2eeb1973163286176fac300a5fed3c2";
+var getWeather = "e2eeb1973163286176fac300a5fed3c2";
 var searches = [];
+var searchEl = document.getElementById("search-btn");
+var searchValEl = document.getElementById("search");
 
 //Render items on page
 //function renderItems(search)
@@ -69,22 +70,19 @@ var searches = [];
 //Dates
 //Date.text(dayjs().format("MM/DD/YYYY"));
 
-function api(){
-//Today's weather
-var currentWeather =  `https://api.openweathermap.org/data/2.5/weather?q=${search.replace(" ", "+")}&appid=${api}&units=imperial`;
+function getWeather(){
+    searchEl.addEventListener("click", () => {
+        var input = searchValEl.value;
+    
 
+var currentWeather =  `https://api.openweathermap.org/data/2.5/weather?q=${search.replace(" ", "+")}&appid=${getWeather}&units=imperial`;
 fetch(currentWeather)
 .then(function(response) {
     return response.json();
 })
-.then(function(data) {
-    console.log(data)
-    //loop so we can see each day's forecast
-    for (var i = 0; i < data.length; i++) {
-   
-    }
+.then((data)=> {
+    console.log(data);
 });
-}
+});
 
-//fetchButton.addEventListener('click', getApi);
-
+getWeather();}
