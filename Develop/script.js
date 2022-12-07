@@ -64,6 +64,7 @@ var searches = [];
 var searchEl = document.getElementById("search-btn");
 var currentCity = document.getElementById("current-city");
 var todayDate = document.getElementById("today-date");
+var icon = document.getElementById("icon");
 //var searchValEl = document.getElementById("search");
 
 //Render items on page
@@ -93,11 +94,14 @@ function getWeather(search) {
             return response.json();
         })
         .then(function(data) {
-
+            console.log(data.weather[0].icon);
            var temp = (data.main.temp);
             var speed = (data.wind.speed);
             var humidity = (data.main.humidity);
             currentCity.textContent = data.name;
+            icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+            icon.alt = data.weather[0].description;
+            icon.title = data.weather[0].description;
             todayTemp.textContent = temp + " °F";
             todayWind.textContent = speed + " MPH";
             todayHumidity.textContent = humidity + " %";
