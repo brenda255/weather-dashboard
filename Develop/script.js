@@ -52,17 +52,18 @@
 
 
 
-var citySearch = document.getElementById("city-search");
-var searchBtn =$("#search-btn");
-var searchHistory=$("#search-history");
-var todayWeather= $("#today-weather");
-var todayTemp =$(".today-temp");
-var todayWind= $(".today-wind");
-var todayHumidity= $(".today-humidity");
-var getWeather = "e2eeb1973163286176fac300a5fed3c2";
+var citySearch = document.getElementById("search");
+var searchBtn = $("#search-btn");
+var searchHistory = $("#search-history");
+var todayWeather = $("#today-weather");
+var todayTemp = document.getElementById("today-temp");
+var todayWind = document.getElementById("today-wind");
+var todayHumidity = document.getElementById("today-humidity");
+var apiKey = "e2eeb1973163286176fac300a5fed3c2";
 var searches = [];
 var searchEl = document.getElementById("search-btn");
-var searchValEl = document.getElementById("search");
+var currentCity = document.getElementById("current-city");
+//var searchValEl = document.getElementById("search");
 
 //Render items on page
 //function renderItems(search)
@@ -70,19 +71,60 @@ var searchValEl = document.getElementById("search");
 //Dates
 //Date.text(dayjs().format("MM/DD/YYYY"));
 
-function getWeather(){
-    searchEl.addEventListener("click", () => {
-        var input = searchValEl.value;
-    
+searchEl.addEventListener("click", function(event) {
+    event.preventDefault();
 
-var currentWeather =  `https://api.openweathermap.org/data/2.5/weather?q=${search.replace(" ", "+")}&appid=${getWeather}&units=imperial`;
-fetch(currentWeather)
-.then(function(response) {
-    return response.json();
-})
-.then((data)=> {
-    console.log(data);
-});
+    searches.push(citySearch.value)
+
+    for(var i=0; i < searches.length; i++) {
+
+   
+    search=searches[i]
+}
+    getWeather(search);
 });
 
-getWeather();}
+function getWeather(search) {
+    var currentWeather = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=imperial`;
+    fetch(currentWeather)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function(data) {
+            
+           var temp = (data.main.temp);
+            var speed = (data.wind.speed);
+            var humidity = (data.main.humidity);
+            currentCity.textContent = data.name;
+            todayTemp.textContent = temp + " °F";
+            todayWind.textContent = speed + " MPH";
+            todayHumidity.textContent = humidity + " %";
+        });
+}
+
+// function userInput() {
+//     var userCity = [
+//         {citySearch.value;
+//             getWeather(userCity)
+//             result.textContent = userCity;
+//             //local storage
+            
+//         }
+//     ]
+// }
+
+// localStorage.setItem("userCity",JSON.stringify(userCity));
+// var forecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + userCity + "&appid=" + apiKey + "units=imperial"; 
+// fetch(forecast)
+// .then(function(response)) {
+//     return response.JSON();
+// }
+
+// getWeather();
+
+// function addSearchHistory() {
+//     var weatherEl = document.querySelector("#search-btn").value;
+//     console.log(weatherEl);
+//     searchHistory.push(weatherEl)
+//     localStorage.setItem('search-history', JSON.stringify(searchHistory));
+// }
