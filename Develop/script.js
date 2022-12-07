@@ -53,9 +53,9 @@
 
 
 var citySearch = document.getElementById("search");
-var searchBtn = $("#search-btn");
-var searchHistory = $("#search-history");
-var todayWeather = $("#today-weather");
+// var searchBtn = $("#search-btn");
+// var searchHistory = $("#search-history");
+// var todayWeather = $("#today-weather");
 var todayTemp = document.getElementById("today-temp");
 var todayWind = document.getElementById("today-wind");
 var todayHumidity = document.getElementById("today-humidity");
@@ -63,6 +63,7 @@ var apiKey = "e2eeb1973163286176fac300a5fed3c2";
 var searches = [];
 var searchEl = document.getElementById("search-btn");
 var currentCity = document.getElementById("current-city");
+var todayDate = document.getElementById("today-date");
 //var searchValEl = document.getElementById("search");
 
 //Render items on page
@@ -82,6 +83,7 @@ searchEl.addEventListener("click", function(event) {
     search=searches[i]
 }
     getWeather(search);
+    date();
 });
 
 function getWeather(search) {
@@ -91,7 +93,7 @@ function getWeather(search) {
             return response.json();
         })
         .then(function(data) {
-            
+
            var temp = (data.main.temp);
             var speed = (data.wind.speed);
             var humidity = (data.main.humidity);
@@ -100,6 +102,10 @@ function getWeather(search) {
             todayWind.textContent = speed + " MPH";
             todayHumidity.textContent = humidity + " %";
         });
+}
+
+function date () {
+todayDate.textContent = dayjs().format("MM/D/YYYY")
 }
 
 // function userInput() {
