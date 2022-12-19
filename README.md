@@ -7,3 +7,4 @@ This weather dashboard will look up any city inputted and give you the current f
 ![](./images/1.png)
 
 ##Link to Deployed Page
+https://brenda255.github.io/weather-dashboard/ 
