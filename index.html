@@ -10,100 +10,105 @@
 </head>
 
 <body>
-    <header>Weather Dashboard</header>
-    <aside>
-        <div id="city-search">
-            <h1><b>Search for a City:</b></h1>
-            <div>
+    <header>
+        <div class="title">Weather Dashboard</div>
+    </header>
+    <div class="body">
+        <aside>
+            <div id="city-search">
+                <h1><b>Search for a City:</b></h1>
 
-                <input name="city" type="text" placeholder="Salt Lake City" id="search" />
-                <button id="search-btn" class="button-2" role="button">Search</button>
-            </div>
-            <!-- already searched cities that are in local storage -->
-            <div id="search-history"></div>
-            <!-- previous searches box -->
-            <div id="previousSearches" style="display: none;">
+                <div>
+                    <input name="city" type="text" placeholder="Salt Lake City" id="search" />
+                    <button id="search-btn" class="button-2" role="button">Search</button>
+                </div>
+                <!-- already searched cities that are in local storage -->
+                <div id="search-history"></div>
+                <!-- previous searches box -->
                 <h2>Previous Searches</h2>
-            </div>    
+                <div id="previousSearches">
+                    <!-- Previous searches content -->
+                </div>
+        </aside>
 
-            <!-- <div class= "bottom-left">
-                <span id="prevySearches">Previous Searches</span>
-            <div id="previous-Searches"></div>   -->
-            </aside>
-    <container>
-        <div id="today-weather">
-            <p>
-                <span id="current-city"></span> <br>
-                    <img src="" id= "icon" alt="" title = "">
-                    <span id="today-date"></span> <br>
-                        <span id="today-temp"></span> <br>
-                            <span id="today-wind"></span> <br>
-                            <span id="today-humidity"></span> 
-            </p>
-            
-        </div>
-        <hr class="hr" style="display: none;">
-        <h2>5-Day Forecast:</h2>
-        <div id="forecast">
-            <div>
+        <container>
+            <div id="today-weather">
                 <p>
-                    <span class="first" ></span>
-                        <img src="" id="first-icon" alt="">
-                        <span id="first-date"></span> <br>
-                            <span id="first-temp"></span> <br>
-                                <span id="first-wind"></span> <br>
-                                <span id="first-humidity"></span> 
+                    <span id="current-city"></span> <br>
+                    <img src="" id="icon" alt="" title="">
+                    <span id="today-date" class="info"></span> <br>
+                    <span id="today-temp" class="info"></span> <br>
+                    <span id="today-wind" class="info"></span> <br>
+                    <span id="today-humidity" class="info"></span>
                 </p>
             </div>
+
             <hr class="hr" style="display: none;">
-            <div>
-                <p>
-                    <span class="second" ></span>
-                        <img src="" id="second-icon" alt="">
-                        <span id="second-date"></span><br>
-                            <span id="second-temp"></span> <br>
-                                <span id="second-wind"></span> <br>
-                                <span id="second-humidity"></span> 
-                </p>
+            <h2>5-Day Forecast:</h2>
+            <div id="forecast">
+                <div class="card">
+                    <div>
+                        <p>
+                            <span class="first"></span>
+                            <img src="" id="first-icon" alt="">
+                            <span id="first-date" ></span> <br>
+                            <span id="first-temp" ></span> <br>
+                            <span id="first-wind" ></span> <br>
+                            <span id="first-humidity" ></span>
+                        </p>
+                    </div>
+                    <hr class="hr" style="display: none;">
+                    <div>
+                        <p>
+                            <span class="second"></span>
+                            <img src="" id="second-icon" alt="">
+                            <span id="second-date" ></span><br>
+                            <span id="second-temp" ></span> <br>
+                            <span id="second-wind" ></span> <br>
+                            <span id="second-humidity" ></span>
+                        </p>
+                    </div>
+                    <hr class="hr" style="display: none;">
+                    <div>
+                        <p>
+                            <span class="third"></span>
+                            <img src="" id="third-icon" alt="">
+                            <span id="third-date" ></span> <br>
+                            <span id="third-temp" ></span> <br>
+                            <span id="third-wind" ></span> <br>
+                            <span id="third-humidity" ></span>
+                        </p>
+                    </div>
+                    <hr class="hr" style="display: none;">
+                    <div>
+                        <p>
+                            <span class="fourth"></span>
+                            <img src="" id="fourth-icon" alt="">
+                            <span id="fourth-date" ></span> <br>
+                            <span id="fourth-temp" ></span> <br>
+                            <span id="fourth-wind" ></span> <br>
+                            <span id="fourth-humidity" ></span>
+                        </p>
+                    </div>
+                    <hr class="hr" style="display: none;">
+                    <div>
+                        <p>
+                            <span class="fifth"></span>
+                            <img src="" id="fifth-icon" alt="">
+                            <span id="fifth-date" ></span> <br>
+                            <span id="fifth-temp" ></span> <br>
+                            <span id="fifth-wind" ></span> <br>
+                            <span id="fifth-humidity" ></span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <hr class="hr" style="display: none;">
-            <div>
-                <p>
-                    <span class="third" ></span>
-                        <img src="" id="third-icon" alt="">
-                        <span id="third-date"></span> <br>
-                            <span id="third-temp"></span> <br>
-                                <span id="third-wind"></span> <br>
-                                <span id="third-humidity"></span> 
-                </p>
-            </div>
-            <hr class="hr" style="display: none;">
-            <div>
-                <p>
-                    <span class="fourth" ></span>
-                        <img src="" id="fourth-icon" alt="">
-                        <span id="fourth-date"></span> <br>
-                            <span id="fourth-temp"></span> <br>
-                                <span id="fourth-wind"></span> <br>
-                                <span id="fourth-humidity"></span> 
-                </p>
-            </div>
-            <hr class="hr" style="display: none;">
-            <div>
-                <p>
-                    <span class="fifth" ></span>
-                        <img src="" id="fifth-icon" alt="">
-                        <span id="fifth-date"></span> <br>
-                            <span id="fifth-temp"></span> <br>
-                                <span id="fifth-wind"></span> <br>
-                                <span id="fifth-humidity"></span> 
-                </p>
-            </div>
-        </div>
-    </container>
     </div>
-    
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    </div>
+    </div>
+    </container>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./Develop/script.js"></script>
 </body>
 

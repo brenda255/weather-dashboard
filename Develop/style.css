@@ -1,16 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+body {
+    background-color: rgb(208, 222, 238);
+    margin: 0;
+    padding: 0;
+}
+
 header {
     font-weight: bold;
     text-align: center;
     font-size: 40px;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.body {
+    flex: 1;
+    display: flex;
+  }  
+
+  .card {
+    display: flex
+  }
+
+aside {
+    width: 35%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding: 16px;
+
+}
+
+#city-search {
+    padding: 40px;
+    margin: 20px 50px;
+}
+
+#previousSearches {
+    width: 145px;
+    border: dotted black;
+    padding: 50px;
+    height: auto;
+}
+
+#today-weather {
+    width: auto;
+
+}
+
+#forecast {
+    display: inherit;
 }
 
 
-#today-weather {
-border: solid ;
-width: 20%;
-
+.title {
+    padding: 24px;
 }
 
 container {
@@ -18,39 +63,49 @@ container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-#forecast {
-display: inherit;
+    flex-wrap: wrap;
+    padding: 32px;
+    width: 600px;
 }
 
-body {
-    background-color: rgb(208, 222, 238);
+p {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#current-city{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.info{
+    display: flex;
 }
 
 #search {
     height: 27px;
 }
+
 /* CSS */
 .button-2 {
-  background-color: rgba(238,174,202,1);
-  border-radius: 8px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    background-color: rgba(238, 174, 202, 1);
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
-
