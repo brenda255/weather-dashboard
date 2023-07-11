@@ -67,9 +67,9 @@ function getWeather(search) {
             icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
             icon.alt = data.weather[0].description;
             icon.title = data.weather[0].description;
-            todayTemp.textContent = temp + " °F";
-            todayWind.textContent = speed + " MPH";
-            todayHumidity.textContent = humidity + " % OF HUMIDITY";
+            todayTemp.textContent ="Temp: " + temp + " °F";
+            todayWind.textContent ="Wind Speed: " + speed + " MPH";
+            todayHumidity.textContent ="Humidity: " + humidity + "%";
         });
 }
 
@@ -109,9 +109,9 @@ function futureDate(search) {
                     firstIcon.alt = data.list[i].weather[0].description;
                     firstIcon.title = data.list[i].weather[0].description;
                   
-                    firstTempElement.textContent = firstTempValue + " °F";
-                    firstWindElement.textContent = firstWindValue + " MPH";
-                    firstHumidityElement.textContent = firstHumidityValue + " % OF HUMIDITY";
+                    firstTempElement.textContent ="Temp: " + firstTempValue + " °F";
+                    firstWindElement.textContent ="Wind Speed: " + firstWindValue + " MPH";
+                    firstHumidityElement.textContent ="Humidity: " + firstHumidityValue + " %";
 
                 }
                 if (secondDate === dataDateFormat && data.list[i].dt_txt.substr(11, 19) === "12:00:00") {
@@ -127,9 +127,9 @@ function futureDate(search) {
                     secondIcon.alt = data.list[i].weather[0].description;
                     secondIcon.title = data.list[i].weather[0].description;
                   
-                    secondTempElement.textContent = secondTempValue + " °F";
-                    secondWindElement.textContent = secondWindValue + " MPH";
-                    secondHumidityElement.textContent = secondHumidityValue + " % OF HUMIDITY";
+                    secondTempElement.textContent ="Temp: " + secondTempValue + " °F";
+                    secondWindElement.textContent ="Wind Speed: " + secondWindValue + " MPH";
+                    secondHumidityElement.textContent ="Humidity: " + secondHumidityValue + " %";
 
                 }
                 if (thirdDate === dataDateFormat && data.list[i].dt_txt.substr(11, 19) === "12:00:00") {
@@ -145,9 +145,9 @@ function futureDate(search) {
                     thirdIcon.alt = data.list[i].weather[0].description;
                     thirdIcon.title = data.list[i].weather[0].description;
                   
-                    thirdTempElement.textContent = thirdTempValue + " °F";
-                    thirdWindElement.textContent = thirdWindValue + " MPH";
-                    thirdHumidityElement.textContent = thirdHumidityValue + " % OF HUMIDITY";
+                    thirdTempElement.textContent ="Temp: " + thirdTempValue + " °F";
+                    thirdWindElement.textContent ="Wind Speed: " + thirdWindValue + " MPH";
+                    thirdHumidityElement.textContent ="Humidity: " + thirdHumidityValue + " %";
                   }
                   
                   if (fourthDate === dataDateFormat && data.list[i].dt_txt.substr(11, 19) === "12:00:00") {
@@ -163,9 +163,9 @@ function futureDate(search) {
                     fourthIcon.alt = data.list[i].weather[0].description;
                     fourthIcon.title = data.list[i].weather[0].description;
                   
-                    fourthTempElement.textContent = fourthTempValue + " °F";
-                    fourthWindElement.textContent = fourthWindValue + " MPH";
-                    fourthHumidityElement.textContent = fourthHumidityValue + " % OF HUMIDITY";
+                    fourthTempElement.textContent = "Temp: " +fourthTempValue + " °F";
+                    fourthWindElement.textContent ="Wind Speed: " + fourthWindValue + " MPH";
+                    fourthHumidityElement.textContent ="Humidity: " + fourthHumidityValue + "%";
                   }
                   
                   if (fifthDate === dataDateFormat && data.list[i].dt_txt.substr(11, 19) === "12:00:00") {
@@ -181,9 +181,9 @@ function futureDate(search) {
                     fifthIcon.alt = data.list[i].weather[0].description;
                     fifthIcon.title = data.list[i].weather[0].description;
                   
-                    fifthTempElement.textContent = fifthTempValue + " °F";
-                    fifthWindElement.textContent = fifthWindValue + " MPH";
-                    fifthHumidityElement.textContent = fifthHumidityValue + " % OF HUMIDITY";
+                    fifthTempElement.textContent = "Temp: " + fifthTempValue + " °F";
+                    fifthWindElement.textContent = "Wind Speed: " + fifthWindValue + " MPH";
+                    fifthHumidityElement.textContent = "Humidity: " + fifthHumidityValue + "%";
                   }
                               }
         })
@@ -210,3 +210,15 @@ function displaySearch() {
     }
   }
 
+//   var clearBtn = document.getElementById("clear-btn");
+
+//   //Event listener for when "Clear" button is clicked
+//   clearBtn.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     clearForm();
+//   });
+
+//   //Function to clear the form input
+//   function clearForm() {
+//     citySearch.value="";
+//   }

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
+*{
+    font-family: 'Nunito', sans-serif;;
+}
 
 body {
     background-color: rgb(208, 222, 238);
@@ -25,10 +27,9 @@ header {
   }
 
 aside {
-    width: 35%;
+    width: 25%;
     box-sizing: border-box;
     flex-shrink: 0;
-    padding: 16px;
 
 }
 
@@ -65,27 +66,56 @@ container {
     align-items: center;
     flex-wrap: wrap;
     padding: 32px;
-    width: 600px;
+    width: 100%;
 }
 
 p {
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Nunito', sans-serif;
 }
 
 #current-city{
     font-weight: bold;
     font-size: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .info{
     display: flex;
+    justify-content: center;
 }
 
 #search {
     height: 27px;
 }
 
+.card {
+    border: 1px solid #001A33;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;  
+    padding: 16px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+       
+}
+
+.dates{
+    font-size: 26px;
+}
+
+.twh{
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.icons{
+    vertical-align: middle;
+    border-style: none;
+}
 /* CSS */
 .button-2 {
     background-color: rgba(238, 174, 202, 1);
@@ -94,7 +124,7 @@ p {
     color: #333333;
     cursor: pointer;
     display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;

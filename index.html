@@ -22,6 +22,10 @@
                     <input name="city" type="text" placeholder="Salt Lake City" id="search" />
                     <button id="search-btn" class="button-2" role="button">Search</button>
                 </div>
+                <!-- <div>
+                    <button id="clear-btn">Clear</button>
+                </div> -->
+
                 <!-- already searched cities that are in local storage -->
                 <div id="search-history"></div>
                 <!-- previous searches box -->
@@ -35,70 +39,69 @@
             <div id="today-weather">
                 <p>
                     <span id="current-city"></span> <br>
-                    <img src="" id="icon" alt="" title="">
-                    <span id="today-date" class="info"></span> <br>
-                    <span id="today-temp" class="info"></span> <br>
-                    <span id="today-wind" class="info"></span> <br>
-                    <span id="today-humidity" class="info"></span>
+                    <span id="today-date" class="dates" class="info" ></span> <br>
+                    <img src="" id="icon"  class="icons "alt="" title="">
+                    <span id="today-temp" class="info" ></span> <br>
+                    <span id="today-wind" class="info" ></span> <br>
+                    <span id="today-humidity" class="info" ></span>
                 </p>
             </div>
 
             <hr class="hr" style="display: none;">
             <h2>5-Day Forecast:</h2>
             <div id="forecast">
-                <div class="card">
-                    <div>
+                    <div class="card">
                         <p>
                             <span class="first"></span>
-                            <img src="" id="first-icon" alt="">
-                            <span id="first-date" ></span> <br>
-                            <span id="first-temp" ></span> <br>
-                            <span id="first-wind" ></span> <br>
-                            <span id="first-humidity" ></span>
+                            <span id="first-date" class="dates"></span> <br>
+                            <img src="" id="first-icon"  class="icons " alt="">
+                            <span id="first-temp" class="twh"></span> <br>
+                            <span id="first-wind" class="twh"></span> <br>
+                            <span id="first-humidity" class="twh"></span>
                         </p>
                     </div>
                     <hr class="hr" style="display: none;">
-                    <div>
+                    <div class="card">
                         <p>
                             <span class="second"></span>
-                            <img src="" id="second-icon" alt="">
-                            <span id="second-date" ></span><br>
-                            <span id="second-temp" ></span> <br>
-                            <span id="second-wind" ></span> <br>
-                            <span id="second-humidity" ></span>
+                            <span id="second-date" class="dates"></span><br>
+                            <img src="" id="second-icon"  class="icons " alt="">
+                            <span id="second-temp" class="twh"></span> <br>
+                            <span id="second-wind" class="twh"></span> <br>
+                            <span id="second-humidity" class="twh"></span>
                         </p>
                     </div>
                     <hr class="hr" style="display: none;">
-                    <div>
+                    <div class="card">
                         <p>
                             <span class="third"></span>
-                            <img src="" id="third-icon" alt="">
-                            <span id="third-date" ></span> <br>
-                            <span id="third-temp" ></span> <br>
-                            <span id="third-wind" ></span> <br>
-                            <span id="third-humidity" ></span>
+                            <span id="third-date" class="dates"></span> <br>
+                            <img src="" id="third-icon"  class="icons "alt="">
+                            <span id="third-temp" class="twh"></span> <br>
+                            <span id="third-wind" class="twh"></span> <br>
+                            <span id="third-humidity" class="twh"></span>
                         </p>
                     </div>
                     <hr class="hr" style="display: none;">
-                    <div>
+                    <div class="card">
                         <p>
                             <span class="fourth"></span>
-                            <img src="" id="fourth-icon" alt="">
-                            <span id="fourth-date" ></span> <br>
-                            <span id="fourth-temp" ></span> <br>
-                            <span id="fourth-wind" ></span> <br>
-                            <span id="fourth-humidity" ></span>
+                            <span id="fourth-date" class="dates"></span> <br>
+                            <img src="" id="fourth-icon"  class="icons "alt="">
+                            <span id="fourth-temp" class="twh"></span> <br>
+                            <span id="fourth-wind" class="twh"></span> <br>
+                            <span id="fourth-humidity" class="twh"></span>
                         </p>
                     </div>
                     <hr class="hr" style="display: none;">
-                    <div>
+                    <div class="card">
                         <p>
                             <span class="fifth"></span>
-                            <img src="" id="fifth-icon" alt="">
-                            <span id="fifth-date" ></span> <br>
-                            <span id="fifth-temp" ></span> <br>
-                            <span id="fifth-wind" ></span> <br>
-                            <span id="fifth-humidity" ></span>
+                            <span id="fifth-date" class="dates"></span> <br>
+                            <img src="" id="fifth-icon"  class="icons " alt="">
+                            <span id="fifth-temp" class="twh"></span> <br>
+                            <span id="fifth-wind" class="twh"></span> <br>
+                            <span id="fifth-humidity" class="twh"></span>
                         </p>
                     </div>
                 </div>
