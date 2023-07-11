@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 *{
-    font-family: 'Nunito', sans-serif;;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -138,4 +138,14 @@ p {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+    aside {
+        width: 100%;
+    }
+
+    .card {
+        margin: 8px;
+    }
 }
